@@ -1,303 +1,303 @@
-1.	Porque você me entende sem eu dizer uma palavra.
-2.	Porque seu sorriso ilumina meu dia.
-3.	Porque com você tudo tem mais graça.
-4.	Porque sua risada é música pra mim.
-5.	Porque você é meu porto seguro.
-6.	Porque nossos momentos juntos são eternos na minha memória.
-7.	Porque seu toque me acalma.
-8.	Porque você me apoia em tudo.
-9.	Porque até nos silêncios, a gente se entende.
-10.	Porque te ouvir é como ouvir uma canção que eu amo.
-11.	Porque você me aceita como eu sou.
-12.	Porque seu olhar me dá paz.
-13.	Porque você transforma a rotina em aventura.
-14.	Porque você me faz acreditar no amor.
-15.	Porque você é minha pessoa favorita.
-16.	Porque você é o melhor "bom dia".
-17.	Porque você me inspira a ser melhor.
-18.	Porque cada detalhe seu é especial pra mim.
-19.	Porque com você, eu me sinto completo(a).
-20.	Porque a gente é parceria de verdade.
-21.	Porque você me faz sentir amado(a).
-22.	Porque nossos planos me animam.
-23.	Porque você cuida de mim até sem perceber.
-24.	Porque seu jeito é único.
-25.	Porque você tem um coração enorme.
-26.	Porque me escuta com paciência.
-27.	Porque a gente ri de coisas bobas juntos.
-28.	Porque você me protege do mundo.
-29.	Porque seu beijo tem gosto de casa.
-30.	Porque você acredita em nós.
-31.	Porque você me respeita.
-32.	Porque sua presença me faz bem.
-33.	Porque você tem cheiro de saudade boa.
-34.	Porque você é a melhor parte dos meus dias.
-35.	Porque você me faz sonhar.
-36.	Porque você é meu abrigo.
-37.	Porque você me dá coragem.
-38.	Porque você tem um jeito leve de amar.
-39.	Porque seus carinhos me curam.
-40.	Porque você me faz sentir importante.
-41.	Porque você me valoriza.
-42.	Porque você me vê de um jeito bonito.
-43.	Porque nossa conexão é rara.
-44.	Porque você segura minha mão até nos piores momentos.
-45.	Porque você me conhece além da superfície.
-46.	Porque você me faz rir com o olhar.
-47.	Porque você é leal.
-48.	Porque você entende até meu silêncio.
-49.	Porque você é meu melhor presente.
-50.	Porque você é paz.
-51.	Porque você tem um jeito especial de dizer “eu te amo”.
-52.	Porque você é presença, mesmo longe.
-53.	Porque você compartilha a vida comigo.
-54.	Porque você ilumina meu mundo.
-55.	Porque seus defeitos também me fazem te amar.
-56.	Porque você é real, de verdade.
-57.	Porque você me faz sentir em casa.
-58.	Porque você dá sentido a tudo.
-59.	Porque sua alegria me contagia.
-60.	Porque você é amor em forma de gente.
-61.	Porque você cuida das minhas feridas.
-62.	Porque você me dá colo.
-63.	Porque você não desiste de mim.
-64.	Porque com você tudo é possível.
-65.	Porque você me ajuda a crescer.
-66.	Porque você compartilha os sonhos comigo.
-67.	Porque você tem um riso que me desarma.
-68.	Porque você me chama de "amor" e eu derreto.
-69.	Porque você respeita minhas escolhas.
-70.	Porque você me completa.
-71.	Porque você faz tudo com carinho.
-72.	Porque você é minha paz depois do caos.
-73.	Porque você me abraça com o coração.
-74.	Porque você não precisa fazer esforço pra me conquistar.
-75.	Porque você é puro sentimento.
-76.	Porque você não julga meus erros.
-77.	Porque você é presente até nos dias difíceis.
-78.	Porque você me ouve com atenção.
-79.	Porque você é minha pessoa.
-80.	Porque você me faz acreditar em finais felizes.
-81.	Porque você é único(a) no mundo.
-82.	Porque você me surpreende com pequenos gestos.
-83.	Porque você conhece minhas manias e mesmo assim me ama.
-84.	Porque você é meu calmante natural.
-85.	Porque você ilumina até os dias nublados.
-86.	Porque seu amor é o meu refúgio.
-87.	Porque você me faz querer viver mais e melhor.
-88.	Porque você é a minha maior sorte.
-89.	Porque você é mais do que eu pedi a Deus.
-90.	Porque você é meu lar.
-91.	Porque você é sincero(a) comigo.
-92.	Porque você está sempre ao meu lado.
-93.	Porque você me chama pra realidade quando preciso.
-94.	Porque você me respeita como sou.
-95.	Porque você é meu equilíbrio.
-96.	Porque você me mostra novos caminhos.
-97.	Porque você transforma lágrimas em sorrisos.
-98.	Porque você me olha com ternura.
-99.	Porque você está nos meus pensamentos o tempo todo.
-100.	Porque você é simplesmente você — e isso basta.
-101.	Porque você me inspira confiança.
-102.	Porque você me ajuda a enfrentar meus medos.
-103.	Porque você me conhece até nos detalhes que eu escondo.
-104.	Porque você é meu apoio constante.
-105.	Porque você valoriza quem eu sou.
-106.	Porque você me faz sentir visto(a).
-107.	Porque sua existência muda a minha.
-108.	Porque você me traz leveza.
-109.	Porque você não me cobra ser perfeito(a).
-110.	Porque você segura minha mão com firmeza.
-111.	Porque sua voz me acalma.
-112.	Porque você é o abraço mais gostoso do mundo.
-113.	Porque com você até o silêncio é confortável.
-114.	Porque você tem um jeito único de amar.
-115.	Porque você me dá segurança.
-116.	Porque você escuta meu coração.
-117.	Porque você sonha junto comigo.
-118.	Porque você tem sempre uma palavra certa.
-119.	Porque você me olha como se eu fosse mágico(a).
-120.	Porque você me fortalece.
-121.	Porque você é minha pessoa certa.
-122.	Porque você aceita minhas fraquezas.
-123.	Porque você me inspira fé.
-124.	Porque você é a calmaria que eu procurava.
-125.	Porque você é minha base.
-126.	Porque você me escolhe todos os dias.
-127.	Porque você se importa com o que eu sinto.
-128.	Porque você me faz rir até da tristeza.
-129.	Porque você faz planos comigo.
-130.	Porque você nunca me faz me sentir sozinho(a).
-131.	Porque você segura meu mundo quando ele parece cair.
-132.	Porque você tem carinho até no olhar.
-133.	Porque você me dá espaço pra ser eu.
-134.	Porque você me dá paz mesmo no caos.
-135.	Porque você é o melhor que já me aconteceu.
-136.	Porque você me faz querer cuidar.
-137.	Porque você se importa com os meus sonhos.
-138.	Porque você celebra minhas conquistas.
-139.	Porque você me motiva nos dias ruins.
-140.	Porque você é meu hoje, meu amanhã, meu sempre.
-141.	Porque você é verdadeiro(a).
-142.	Porque você nunca me diminui.
-143.	Porque você é meu presente de todos os dias.
-144.	Porque você me acolhe.
-145.	Porque você é carinho em forma de gente.
-146.	Porque você é luz mesmo na escuridão.
-147.	Porque com você tudo faz mais sentido.
-148.	Porque você tem um coração lindo.
-149.	Porque você me faz querer viver o agora.
-150.	Porque você me entende com o olhar.
-151.	Porque você tem sempre um gesto de cuidado.
-152.	Porque você é meu sonho acordado.
-153.	Porque você me traz esperança.
-154.	Porque você me faz sentir digno(a) de amor.
-155.	Porque você está em cada canção que eu amo.
-156.	Porque você é lar mesmo longe.
-157.	Porque você é o abraço que eu procuro no fim do dia.
-158.	Porque você me trata com ternura.
-159.	Porque você não desiste da gente.
-160.	Porque você me dá vontade de lutar.
-161.	Porque você é a minha escolha feliz.
-162.	Porque você me encanta todos os dias.
-163.	Porque você me dá força só com um sorriso.
-164.	Porque você respeita meu tempo.
-165.	Porque você cuida das minhas emoções.
-166.	Porque você tem alma bonita.
-167.	Porque você é minha companhia preferida.
-168.	Porque você sabe me amar do seu jeito.
-169.	Porque você é minha paz diária.
-170.	Porque você é meu tesouro mais precioso.
-171.	Porque você se doa sem medir.
-172.	Porque você me emociona.
-173.	Porque você tem um jeito doce de ser.
-174.	Porque você é um presente da vida.
-175.	Porque você é o que eu nunca imaginei, mas sempre precisei.
-176.	Porque você me ensina sobre o amor.
-177.	Porque você está sempre disposto(a) a somar.
-178.	Porque você tem alma de poesia.
-179.	Porque você é meu conto favorito.
-180.	Porque você me faz sentir suficiente.
-181.	Porque você me envolve com amor.
-182.	Porque você tem um jeitinho só seu.
-183.	Porque você me faz sentir sorte.
-184.	Porque você é minha prioridade.
-185.	Porque você me mostra que o amor pode ser leve.
-186.	Porque você é simples e especial.
-187.	Porque você é a minha pessoa sem precisar ser perfeita.
-188.	Porque você me dá coragem de tentar.
-189.	Porque você transforma o ordinário em mágico.
-190.	Porque você me ama mesmo nos meus piores dias.
-191.	Porque você sabe quando eu preciso de silêncio.
-192.	Porque você me faz sentir acolhido(a).
-193.	Porque você não precisa fazer esforço pra me conquistar.
-194.	Porque você é a paz que faltava em mim.
-195.	Porque você é amor sem exagero.
-196.	Porque você respeita minhas cicatrizes.
-197.	Porque você me vê com o coração.
-198.	Porque você me faz acreditar em milagres simples.
-199.	Porque você tem sempre uma palavra de apoio.
-200.	Porque você é amor em todos os sentidos.
-201.	Porque você me mostra que o amor pode ser tranquilo.
-202.	Porque você respeita minhas escolhas.
-203.	Porque você me acolhe sem julgamento.
-204.	Porque você desperta o melhor em mim.
-205.	Porque você é sincero(a), mesmo quando dói.
-206.	Porque você me faz querer ser uma pessoa melhor.
-207.	Porque você transforma dias ruins em lembranças boas.
-208.	Porque você me mostra que amar é seguro.
-209.	Porque você me ouve com o coração.
-210.	Porque você é um presente que a vida me deu.
-211.	Porque você nunca me faz sentir inferior.
-212.	Porque seu amor é livre e forte ao mesmo tempo.
-213.	Porque você é presença, mesmo na ausência.
-214.	Porque você me dá asas e também é meu ninho.
-215.	Porque você me faz acreditar em finais felizes.
-216.	Porque você me traz equilíbrio.
-217.	Porque você tem um riso que me cura.
-218.	Porque você valoriza os pequenos gestos.
-219.	Porque você ilumina os meus dias escuros.
-220.	Porque você é poesia que virou gente.
-221.	Porque você me dá um novo motivo pra sorrir todos os dias.
-222.	Porque você me mostra que não estou só.
-223.	Porque você é minha âncora e meu vento.
-224.	Porque você é afeto constante.
-225.	Porque você não mede esforços pra me ver bem.
-226.	Porque você sabe me acalmar com uma só palavra.
-227.	Porque você é alma gêmea de sintonia.
-228.	Porque você cuida de mim como ninguém.
-229.	Porque você me dá paz no coração.
-230.	Porque você me olha com amor de verdade.
-231.	Porque você compartilha seus sonhos comigo.
-232.	Porque você me dá vontade de viver intensamente.
-233.	Porque você está comigo até quando não entende.
-234.	Porque você me ama sem precisar mudar quem eu sou.
-235.	Porque você é meu melhor lugar no mundo.
-236.	Porque você valoriza o que temos.
-237.	Porque você me lembra o que é amar com leveza.
-238.	Porque você me apoia mesmo nas loucuras.
-239.	Porque você é cuidado em forma de gente.
-240.	Porque você nunca me deixa esquecer que sou importante.
-241.	Porque você sorri quando me vê chegar.
-242.	Porque você me respeita nas minhas sombras.
-243.	Porque você é abrigo e calor.
-244.	Porque você é meu descanso emocional.
-245.	Porque você me inspira em silêncio.
-246.	Porque você me ensina a amar melhor.
-247.	Porque você é fiel à nossa história.
-248.	Porque você é sensível com o que sinto.
-249.	Porque você me olha como se eu fosse arte.
-250.	Porque você me completa sem me anular.
-251.	Porque você tem uma doçura só sua.
-252.	Porque você faz com que eu me sinta em casa.
-253.	Porque você me fortalece só por estar ali.
-254.	Porque você me entende mesmo sem palavras.
-255.	Porque você é o melhor presente que a vida me deu.
-256.	Porque você compartilha o silêncio comigo.
-257.	Porque você respeita minha dor.
-258.	Porque você me ama nos meus dias cinzas.
-259.	Porque você me vê além das aparências.
-260.	Porque você é meu amor com calma e verdade.
-261.	Porque você me faz sentir valorizado(a).
-262.	Porque você não tem medo de demonstrar afeto.
-263.	Porque você me chama pra dançar no meio da sala.
-264.	Porque você se preocupa com meu bem-estar.
-265.	Porque você me dá espaço e presença.
-266.	Porque você é intensidade e paz.
-267.	Porque você entende meus silêncios.
-268.	Porque você não desiste fácil.
-269.	Porque você me dá vontade de construir um futuro.
-270.	Porque você é luz que permanece.
-271.	Porque você tem sempre um tempo pra mim.
-272.	Porque você é meu amor sem medidas.
-273.	Porque você é minha calmaria preferida.
-274.	Porque você é minha inspiração diária.
-275.	Porque você valoriza nossas memórias.
-276.	Porque você me faz sentir importante.
-277.	Porque você é meu parceiro(a) de vida.
-278.	Porque você me ama nos detalhes.
-279.	Porque você me ensina paciência.
-280.	Porque você é meu recomeço favorito.
-281.	Porque você tem alma boa.
-282.	Porque você me dá colo em pensamento.
-283.	Porque você sabe a hora certa de ficar em silêncio comigo.
-284.	Porque você me lembra que amar é simples.
-285.	Porque você me envolve com o coração.
-286.	Porque você é meu ponto de paz.
-287.	Porque você é meu segredo mais bonito.
-288.	Porque você torna tudo mais bonito.
-289.	Porque você me trata como prioridade.
-290.	Porque você me vê além do que eu vejo.
-291.	Porque você me aceita até nos dias em que eu me rejeito.
-292.	Porque você é meu reflexo mais bonito.
-293.	Porque você me ajuda a me enxergar com mais carinho.
-294.	Porque você transforma o comum em especial.
-295.	Porque você faz parte de mim.
-296.	Porque você me mostra o valor da reciprocidade.
-297.	Porque você desperta amor em tudo.
-298.	Porque você é meu presente diário.
-299.	Porque você cuida de nós dois com carinho.
-300.	Porque você me ensina o amor todos os dias.
+Porque você me entende sem eu dizer uma palavra.
+Porque seu sorriso ilumina meu dia.
+Porque com você tudo tem mais graça.
+Porque sua risada é música pra mim.
+Porque você é meu porto seguro.
+Porque nossos momentos juntos são eternos na minha memória.
+Porque seu toque me acalma.
+Porque você me apoia em tudo.
+Porque até nos silêncios, a gente se entende.
+Porque te ouvir é como ouvir uma canção que eu amo.
+Porque você me aceita como eu sou.
+Porque seu olhar me dá paz.
+Porque você transforma a rotina em aventura.
+Porque você me faz acreditar no amor.
+Porque você é minha pessoa favorita.
+Porque você é o melhor "bom dia".
+Porque você me inspira a ser melhor.
+Porque cada detalhe seu é especial pra mim.
+Porque com você, eu me sinto completo(a).
+Porque a gente é parceria de verdade.
+Porque você me faz sentir amado(a).
+Porque nossos planos me animam.
+Porque você cuida de mim até sem perceber.
+Porque seu jeito é único.
+Porque você tem um coração enorme.
+Porque me escuta com paciência.
+Porque a gente ri de coisas bobas juntos.
+Porque você me protege do mundo.
+Porque seu beijo tem gosto de casa.
+Porque você acredita em nós.
+Porque você me respeita.
+Porque sua presença me faz bem.
+Porque você tem cheiro de saudade boa.
+Porque você é a melhor parte dos meus dias.
+Porque você me faz sonhar.
+Porque você é meu abrigo.
+Porque você me dá coragem.
+Porque você tem um jeito leve de amar.
+Porque seus carinhos me curam.
+Porque você me faz sentir importante.
+Porque você me valoriza.
+Porque você me vê de um jeito bonito.
+Porque nossa conexão é rara.
+Porque você segura minha mão até nos piores momentos.
+Porque você me conhece além da superfície.
+Porque você me faz rir com o olhar.
+Porque você é leal.
+Porque você entende até meu silêncio.
+Porque você é meu melhor presente.
+Porque você é paz.
+Porque você tem um jeito especial de dizer “eu te amo”.
+Porque você é presença, mesmo longe.
+Porque você compartilha a vida comigo.
+Porque você ilumina meu mundo.
+Porque seus defeitos também me fazem te amar.
+Porque você é real, de verdade.
+Porque você me faz sentir em casa.
+Porque você dá sentido a tudo.
+Porque sua alegria me contagia.
+Porque você é amor em forma de gente.
+Porque você cuida das minhas feridas.
+Porque você me dá colo.
+Porque você não desiste de mim.
+Porque com você tudo é possível.
+Porque você me ajuda a crescer.
+Porque você compartilha os sonhos comigo.
+Porque você tem um riso que me desarma.
+Porque você me chama de "amor" e eu derreto.
+Porque você respeita minhas escolhas.
+Porque você me completa.
+Porque você faz tudo com carinho.
+Porque você é minha paz depois do caos.
+Porque você me abraça com o coração.
+Porque você não precisa fazer esforço pra me conquistar.
+Porque você é puro sentimento.
+Porque você não julga meus erros.
+Porque você é presente até nos dias difíceis.
+Porque você me ouve com atenção.
+Porque você é minha pessoa.
+Porque você me faz acreditar em finais felizes.
+Porque você é único(a) no mundo.
+Porque você me surpreende com pequenos gestos.
+Porque você conhece minhas manias e mesmo assim me ama.
+Porque você é meu calmante natural.
+Porque você ilumina até os dias nublados.
+Porque seu amor é o meu refúgio.
+Porque você me faz querer viver mais e melhor.
+Porque você é a minha maior sorte.
+Porque você é mais do que eu pedi a Deus.
+Porque você é meu lar.
+Porque você é sincero(a) comigo.
+Porque você está sempre ao meu lado.
+Porque você me chama pra realidade quando preciso.
+Porque você me respeita como sou.
+Porque você é meu equilíbrio.
+Porque você me mostra novos caminhos.
+Porque você transforma lágrimas em sorrisos.
+Porque você me olha com ternura.
+Porque você está nos meus pensamentos o tempo todo.
+Porque você é simplesmente você — e isso basta.
+Porque você me inspira confiança.
+Porque você me ajuda a enfrentar meus medos.
+Porque você me conhece até nos detalhes que eu escondo.
+Porque você é meu apoio constante.
+Porque você valoriza quem eu sou.
+Porque você me faz sentir visto(a).
+Porque sua existência muda a minha.
+Porque você me traz leveza.
+Porque você não me cobra ser perfeito(a).
+Porque você segura minha mão com firmeza.
+Porque sua voz me acalma.
+Porque você é o abraço mais gostoso do mundo.
+Porque com você até o silêncio é confortável.
+Porque você tem um jeito único de amar.
+Porque você me dá segurança.
+Porque você escuta meu coração.
+Porque você sonha junto comigo.
+Porque você tem sempre uma palavra certa.
+Porque você me olha como se eu fosse mágico(a).
+Porque você me fortalece.
+Porque você é minha pessoa certa.
+Porque você aceita minhas fraquezas.
+Porque você me inspira fé.
+Porque você é a calmaria que eu procurava.
+Porque você é minha base.
+Porque você me escolhe todos os dias.
+Porque você se importa com o que eu sinto.
+Porque você me faz rir até da tristeza.
+Porque você faz planos comigo.
+Porque você nunca me faz me sentir sozinho(a).
+Porque você segura meu mundo quando ele parece cair.
+Porque você tem carinho até no olhar.
+Porque você me dá espaço pra ser eu.
+Porque você me dá paz mesmo no caos.
+Porque você é o melhor que já me aconteceu.
+Porque você me faz querer cuidar.
+Porque você se importa com os meus sonhos.
+Porque você celebra minhas conquistas.
+Porque você me motiva nos dias ruins.
+Porque você é meu hoje, meu amanhã, meu sempre.
+Porque você é verdadeiro(a).
+Porque você nunca me diminui.
+Porque você é meu presente de todos os dias.
+Porque você me acolhe.
+Porque você é carinho em forma de gente.
+Porque você é luz mesmo na escuridão.
+Porque com você tudo faz mais sentido.
+Porque você tem um coração lindo.
+Porque você me faz querer viver o agora.
+Porque você me entende com o olhar.
+Porque você tem sempre um gesto de cuidado.
+Porque você é meu sonho acordado.
+Porque você me traz esperança.
+Porque você me faz sentir digno(a) de amor.
+Porque você está em cada canção que eu amo.
+Porque você é lar mesmo longe.
+Porque você é o abraço que eu procuro no fim do dia.
+Porque você me trata com ternura.
+Porque você não desiste da gente.
+Porque você me dá vontade de lutar.
+Porque você é a minha escolha feliz.
+Porque você me encanta todos os dias.
+Porque você me dá força só com um sorriso.
+Porque você respeita meu tempo.
+Porque você cuida das minhas emoções.
+Porque você tem alma bonita.
+Porque você é minha companhia preferida.
+Porque você sabe me amar do seu jeito.
+Porque você é minha paz diária.
+Porque você é meu tesouro mais precioso.
+Porque você se doa sem medir.
+Porque você me emociona.
+Porque você tem um jeito doce de ser.
+Porque você é um presente da vida.
+Porque você é o que eu nunca imaginei, mas sempre precisei.
+Porque você me ensina sobre o amor.
+Porque você está sempre disposto(a) a somar.
+Porque você tem alma de poesia.
+Porque você é meu conto favorito.
+Porque você me faz sentir suficiente.
+Porque você me envolve com amor.
+Porque você tem um jeitinho só seu.
+Porque você me faz sentir sorte.
+Porque você é minha prioridade.
+Porque você me mostra que o amor pode ser leve.
+Porque você é simples e especial.
+Porque você é a minha pessoa sem precisar ser perfeita.
+Porque você me dá coragem de tentar.
+Porque você transforma o ordinário em mágico.
+Porque você me ama mesmo nos meus piores dias.
+Porque você sabe quando eu preciso de silêncio.
+Porque você me faz sentir acolhido(a).
+Porque você não precisa fazer esforço pra me conquistar.
+Porque você é a paz que faltava em mim.
+Porque você é amor sem exagero.
+Porque você respeita minhas cicatrizes.
+Porque você me vê com o coração.
+Porque você me faz acreditar em milagres simples.
+Porque você tem sempre uma palavra de apoio.
+Porque você é amor em todos os sentidos.
+Porque você me mostra que o amor pode ser tranquilo.
+Porque você respeita minhas escolhas.
+Porque você me acolhe sem julgamento.
+Porque você desperta o melhor em mim.
+Porque você é sincero(a), mesmo quando dói.
+Porque você me faz querer ser uma pessoa melhor.
+Porque você transforma dias ruins em lembranças boas.
+Porque você me mostra que amar é seguro.
+Porque você me ouve com o coração.
+Porque você é um presente que a vida me deu.
+Porque você nunca me faz sentir inferior.
+Porque seu amor é livre e forte ao mesmo tempo.
+Porque você é presença, mesmo na ausência.
+Porque você me dá asas e também é meu ninho.
+Porque você me faz acreditar em finais felizes.
+Porque você me traz equilíbrio.
+Porque você tem um riso que me cura.
+Porque você valoriza os pequenos gestos.
+Porque você ilumina os meus dias escuros.
+Porque você é poesia que virou gente.
+Porque você me dá um novo motivo pra sorrir todos os dias.
+Porque você me mostra que não estou só.
+Porque você é minha âncora e meu vento.
+Porque você é afeto constante.
+Porque você não mede esforços pra me ver bem.
+Porque você sabe me acalmar com uma só palavra.
+Porque você é alma gêmea de sintonia.
+Porque você cuida de mim como ninguém.
+Porque você me dá paz no coração.
+Porque você me olha com amor de verdade.
+Porque você compartilha seus sonhos comigo.
+Porque você me dá vontade de viver intensamente.
+Porque você está comigo até quando não entende.
+Porque você me ama sem precisar mudar quem eu sou.
+Porque você é meu melhor lugar no mundo.
+Porque você valoriza o que temos.
+Porque você me lembra o que é amar com leveza.
+Porque você me apoia mesmo nas loucuras.
+Porque você é cuidado em forma de gente.
+Porque você nunca me deixa esquecer que sou importante.
+Porque você sorri quando me vê chegar.
+Porque você me respeita nas minhas sombras.
+Porque você é abrigo e calor.
+Porque você é meu descanso emocional.
+Porque você me inspira em silêncio.
+Porque você me ensina a amar melhor.
+Porque você é fiel à nossa história.
+Porque você é sensível com o que sinto.
+Porque você me olha como se eu fosse arte.
+Porque você me completa sem me anular.
+Porque você tem uma doçura só sua.
+Porque você faz com que eu me sinta em casa.
+Porque você me fortalece só por estar ali.
+Porque você me entende mesmo sem palavras.
+Porque você é o melhor presente que a vida me deu.
+Porque você compartilha o silêncio comigo.
+Porque você respeita minha dor.
+Porque você me ama nos meus dias cinzas.
+Porque você me vê além das aparências.
+Porque você é meu amor com calma e verdade.
+Porque você me faz sentir valorizado(a).
+Porque você não tem medo de demonstrar afeto.
+Porque você me chama pra dançar no meio da sala.
+Porque você se preocupa com meu bem-estar.
+Porque você me dá espaço e presença.
+Porque você é intensidade e paz.
+Porque você entende meus silêncios.
+Porque você não desiste fácil.
+Porque você me dá vontade de construir um futuro.
+Porque você é luz que permanece.
+Porque você tem sempre um tempo pra mim.
+Porque você é meu amor sem medidas.
+Porque você é minha calmaria preferida.
+Porque você é minha inspiração diária.
+Porque você valoriza nossas memórias.
+Porque você me faz sentir importante.
+Porque você é meu parceiro(a) de vida.
+Porque você me ama nos detalhes.
+Porque você me ensina paciência.
+Porque você é meu recomeço favorito.
+Porque você tem alma boa.
+Porque você me dá colo em pensamento.
+Porque você sabe a hora certa de ficar em silêncio comigo.
+Porque você me lembra que amar é simples.
+Porque você me envolve com o coração.
+Porque você é meu ponto de paz.
+Porque você é meu segredo mais bonito.
+Porque você torna tudo mais bonito.
+Porque você me trata como prioridade.
+Porque você me vê além do que eu vejo.
+Porque você me aceita até nos dias em que eu me rejeito.
+Porque você é meu reflexo mais bonito.
+Porque você me ajuda a me enxergar com mais carinho.
+Porque você transforma o comum em especial.
+Porque você faz parte de mim.
+Porque você me mostra o valor da reciprocidade.
+Porque você desperta amor em tudo.
+Porque você é meu presente diário.
+Porque você cuida de nós dois com carinho.
+Porque você me ensina o amor todos os dias.
 
 
 
