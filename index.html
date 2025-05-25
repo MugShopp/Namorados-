@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expansão da Consciência</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ffffff, #ffe5e5);
+        color: #000;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://i.postimg.cc/tYH3yYZC/coracao.png');
+        background-repeat: repeat;
+        background-size: 80px;
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .creditos {
+        font-size: 14px;
+        margin-bottom: 12px;
+        color: #222;
+        font-weight: bold;
+        z-index: 1;
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 20px;
+        z-index: 1;
+      }
+
+      .frase {
+        font-size: 28px;
+        font-weight: 500;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        max-width: 90%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        z-index: 1;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
+    <img class="logo" src="https://i.postimg.cc/LJ8Z6fHR/365-logo.png" alt="Logo 365 Motivos" />
+    <div class="frase" id="frase">Carregando frase...</div>
+
+    <script>
+      async function carregarFrase() {
+        try {
+          const response = await fetch('gratidao.txt');
+          if (!response.ok) throw new Error('Arquivo frases.txt não encontrado');
+          const texto = await response.text();
+          const frases = texto.split('\n').filter(l => l.trim() !== '');
+          const hoje = new Date();
+          const inicio = new Date(hoje.getFullYear(), 0, 0);
+          const diff = hoje - inicio;
+          const umDia = 1000 * 60 * 60 * 24;
+          const diaDoAno = Math.floor(diff / umDia);
+          const frase = frases[diaDoAno % frases.length];
+          document.getElementById('frase').textContent = `"${frase}"`;
+        } catch (e) {
+          document.getElementById('frase').textContent = 'Erro ao carregar a frase do dia.';
+          console.error(e);
+        }
+      }
+      carregarFrase();
+    </script>
+  </body>
+</html>
