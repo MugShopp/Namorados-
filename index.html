@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Expansão da Consciência</title>
+    <title>365 Motivos para Te Amar</title>
     <style>
       body {
         margin: 0;
@@ -14,42 +14,18 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: linear-gradient(135deg, #ffffff, #ffe5e5);
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 0, 0, 0.1));
         color: #000;
         text-align: center;
         position: relative;
         overflow: hidden;
       }
-
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://i.postimg.cc/tYH3yYZC/coracao.png');
-        background-repeat: repeat;
-        background-size: 80px;
-        opacity: 0.4;
-        pointer-events: none;
-        z-index: 0;
-      }
-
       .creditos {
         font-size: 14px;
         margin-bottom: 12px;
         color: #222;
         font-weight: bold;
-        z-index: 1;
       }
-
-      .logo {
-        width: 120px;
-        margin-bottom: 20px;
-        z-index: 1;
-      }
-
       .frase {
         font-size: 28px;
         font-weight: 500;
@@ -57,23 +33,42 @@
         background-color: rgba(255, 255, 255, 0.85);
         border-radius: 12px;
         max-width: 90%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         margin-bottom: 30px;
-        z-index: 1;
         position: relative;
+        z-index: 2;
+      }
+      .logo {
+        width: 160px;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+      }
+      .coracao {
+        position: absolute;
+        width: 60px;
+        opacity: 0.4;
+        z-index: 1;
       }
     </style>
   </head>
   <body>
     <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-    <img class="logo" src="https://i.postimg.cc/LJ8Z6fHR/365-logo.png" alt="Logo 365 Motivos" />
+    <img class="logo" src="https://i.postimg.cc/LJ8Z6fHR/365-motivos-logo.png" alt="Logo 365 Motivos" />
     <div class="frase" id="frase">Carregando frase...</div>
+
+    <!-- Corações -->
+    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 10%; left: 5%;" />
+    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 20%; right: 10%;" />
+    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="bottom: 15%; left: 20%;" />
+    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="bottom: 5%; right: 15%;" />
+    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 50%; left: 45%;" />
 
     <script>
       async function carregarFrase() {
         try {
-          const response = await fetch('gratidao.txt');
-          if (!response.ok) throw new Error('Arquivo frases.txt não encontrado');
+          const response = await fetch('namorados.txt');
+          if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
           const texto = await response.text();
           const frases = texto.split('\n').filter(l => l.trim() !== '');
           const hoje = new Date();
