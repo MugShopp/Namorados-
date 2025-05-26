@@ -1,110 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>365 Motivos para Te Amar</title>
-    <style>
-      @font-face {
-        font-family: 'Ahkio';
-        src: url('fonts/Ahkio-Regular.ttf') format('truetype');
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expansão da Consciência</title>
+  <style>
+    @font-face {
+      font-family: 'Ahkio';
+      src: url('./fonts/Ahkio-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 0.3));
+      position: relative;
+      overflow: hidden;
+      color: #000;
+      text-align: center;
+    }
+
+    /* Fundo com corações */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background-image:
+        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
+        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
+        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
+        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
+        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png');
+      background-repeat: no-repeat;
+      background-position:
+        10% 15%,
+        50% 5%,
+        80% 30%,
+        25% 70%,
+        75% 75%;
+      background-size: 40px 40px;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .creditos {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #222;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    .colecao {
+      width: 170px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .frase {
+      font-family: 'Ahkio', cursive, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      max-width: 90%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 180px;
+      opacity: 1;
+      margin-top: 0;
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
+  <img class="colecao" src="https://i.postimg.cc/DyrmfWR5/Photoroom-20250525-190633840-1.png" alt="Imagem Coleção 375 Dias" />
+  <div class="frase" id="frase">Carregando frase...</div>
+  <img class="logo" src="https://i.postimg.cc/8CBqjGN2/trashed-1750812378-file-00000000b69061f8ae80cb7ce110477f-1-7.png" alt="Logo MugShopp" />
+
+  <script>
+    async function carregarFrase() {
+      try {
+        const response = await fetch('namorados.txt');
+        if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
+        const texto = await response.text();
+        const frases = texto.split('\n').filter(l => l.trim() !== '');
+        const hoje = new Date();
+        const inicio = new Date(hoje.getFullYear(), 0, 1); // 1º de janeiro
+        const diff = hoje - inicio;
+        const umDia = 1000 * 60 * 60 * 24;
+        const diaDoAno = Math.floor(diff / umDia);
+        const frase = frases[diaDoAno % frases.length];
+        document.getElementById('frase').textContent = `"${frase}"`;
+      } catch (e) {
+        document.getElementById('frase').textContent = 'Erro ao carregar a frase do dia.';
+        console.error(e);
       }
-
-      body {
-        margin: 0;
-        padding: 20px;
-        font-family: 'Segoe UI', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: linear-gradient(to bottom right, #fff0f0, #ffe6e6);
-        color: #000;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .creditos {
-        font-size: 14px;
-        margin-bottom: 12px;
-        color: #222;
-        font-weight: bold;
-      }
-
-      .colecao {
-        width: 170px;
-        margin-bottom: 20px;
-      }
-
-      .frase {
-        font-size: 28px;
-        font-weight: 500;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.85);
-        border-radius: 12px;
-        max-width: 90%;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        margin-bottom: 30px;
-        font-family: 'Ahkio', cursive;
-      }
-
-      .logo {
-        width: 180px;
-        opacity: 1;
-      }
-
-      .coracao {
-        position: absolute;
-        width: 60px;
-        opacity: 0.4;
-      }
-
-      .c1 { top: 10%; left: 15%; }
-      .c2 { top: 30%; right: 10%; }
-      .c3 { bottom: 20%; left: 25%; }
-      .c4 { bottom: 10%; right: 20%; }
-      .c5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    </style>
-  </head>
-  <body>
-    <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-
-    <img class="colecao" src="https://i.postimg.cc/DyrmfWR5/Photoroom-20250525-190633840-1.png" alt="Imagem da Coleção" />
-
-    <div class="frase" id="frase">Carregando frase...</div>
-
-    <img class="logo" src="https://i.postimg.cc/f3Hyxvmq/mugshopp-logo.png" alt="Logo MugShopp" />
-
-    <!-- Corações no fundo -->
-    <img class="coracao c1" src="https://i.postimg.cc/SRQ1XYD8/images-1-4.png" alt="Coração" />
-    <img class="coracao c2" src="https://i.postimg.cc/SRQ1XYD8/images-1-4.png" alt="Coração" />
-    <img class="coracao c3" src="https://i.postimg.cc/SRQ1XYD8/images-1-4.png" alt="Coração" />
-    <img class="coracao c4" src="https://i.postimg.cc/SRQ1XYD8/images-1-4.png" alt="Coração" />
-    <img class="coracao c5" src="https://i.postimg.cc/SRQ1XYD8/images-1-4.png" alt="Coração" />
-
-    <script>
-      async function carregarFrase() {
-        try {
-          const response = await fetch('namorados.txt');
-          if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
-          const texto = await response.text();
-          const frases = texto.split('\n').filter(l => l.trim() !== '');
-          const hoje = new Date();
-          const inicio = new Date(hoje.getFullYear(), 0, 0);
-          const diff = hoje - inicio;
-          const umDia = 1000 * 60 * 60 * 24;
-          const diaDoAno = Math.floor(diff / umDia);
-          const frase = frases[diaDoAno % frases.length];
-          document.getElementById('frase').textContent = `"${frase}"`;
-        } catch (e) {
-          document.getElementById('frase').textContent = 'Erro ao carregar a frase do dia.';
-          console.error(e);
-        }
-      }
-
-      carregarFrase();
-    </script>
-  </body>
+    }
+    carregarFrase();
+  </script>
+</body>
 </html>
