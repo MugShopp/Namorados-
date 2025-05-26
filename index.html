@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>365 Motivos para Te Amar</title>
+    <title>365 Motivos para te Amar</title>
     <style>
       body {
         margin: 0;
@@ -14,18 +14,39 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 0, 0, 0.1));
+        background: linear-gradient(to bottom right, rgba(255,255,255,0.6), rgba(255,0,0,0.2));
         color: #000;
         text-align: center;
         position: relative;
         overflow: hidden;
       }
+
+      .coracao {
+        position: absolute;
+        width: 60px;
+        opacity: 0.4;
+      }
+
+      .c1 { top: 10%; left: 15%; }
+      .c2 { top: 25%; right: 10%; }
+      .c3 { bottom: 20%; left: 20%; }
+      .c4 { bottom: 15%; right: 25%; }
+      .c5 { top: 50%; left: 45%; }
+
       .creditos {
         font-size: 14px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         color: #222;
         font-weight: bold;
+        z-index: 1;
       }
+
+      .colecao {
+        width: 170px;
+        margin-bottom: 15px;
+        z-index: 1;
+      }
+
       .frase {
         font-size: 28px;
         font-weight: 500;
@@ -34,41 +55,36 @@
         border-radius: 12px;
         max-width: 90%;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        margin-bottom: 30px;
-        position: relative;
-        z-index: 2;
+        margin-bottom: 20px;
+        z-index: 1;
       }
+
       .logo {
-        width: 260px;
+        width: 240px;
         opacity: 1;
-        z-index: 2;
-        position: relative;
-      }
-      .coracao {
-        position: absolute;
-        width: 60px;
-        opacity: 0.4;
+        margin-top: 20px;
         z-index: 1;
       }
     </style>
   </head>
   <body>
-    <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-    <img class="logo" src="https://i.postimg.cc/LJ8Z6fHR/365-motivos-logo.png" alt="Logo 365 Motivos" />
-    <div class="frase" id="frase">Carregando frase...</div>
+    <!-- Corações ao fundo -->
+    <img class="coracao c1" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
+    <img class="coracao c2" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
+    <img class="coracao c3" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
+    <img class="coracao c4" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
+    <img class="coracao c5" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
 
-    <!-- Corações -->
-    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 10%; left: 5%;" />
-    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 20%; right: 10%;" />
-    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="bottom: 15%; left: 20%;" />
-    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="bottom: 5%; right: 15%;" />
-    <img class="coracao" src="https://i.postimg.cc/tYH3yYZC/heart.png" style="top: 50%; left: 45%;" />
+    <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
+    <img class="colecao" src="https://i.postimg.cc/LJ8Z6fHR/365-motivos.png" alt="365 Motivos para te Amar" />
+    <div class="frase" id="frase">Carregando frase...</div>
+    <img class="logo" src="https://i.postimg.cc/f3Hyxvmq/mugshopp-logo.png" alt="Logo MugShopp" />
 
     <script>
       async function carregarFrase() {
         try {
           const response = await fetch('namorados.txt');
-          if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
+          if (!response.ok) throw new Error('Arquivo não encontrado');
           const texto = await response.text();
           const frases = texto.split('\n').filter(l => l.trim() !== '');
           const hoje = new Date();
