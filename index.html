@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>365 Motivos para te Amar</title>
+    <title>Expansão da Consciência</title>
     <style>
+      @font-face {
+        font-family: 'Ahkio';
+        src: url('https://github.com/lupereira1301/Namorados-/raw/main/fonts/Ahkio-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
       body {
         margin: 0;
         padding: 20px;
@@ -14,40 +20,28 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: linear-gradient(to bottom right, rgba(255,255,255,0.6), rgba(255,0,0,0.2));
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(255, 0, 0, 0.2));
         color: #000;
         text-align: center;
         position: relative;
         overflow: hidden;
       }
-
-      .coracao {
-        position: absolute;
-        width: 60px;
-        opacity: 0.4;
-      }
-
-      .c1 { top: 10%; left: 15%; }
-      .c2 { top: 25%; right: 10%; }
-      .c3 { bottom: 20%; left: 20%; }
-      .c4 { bottom: 15%; right: 25%; }
-      .c5 { top: 50%; left: 45%; }
-
       .creditos {
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         color: #222;
         font-weight: bold;
-        z-index: 1;
+        z-index: 2;
+        position: relative;
       }
-
-      .colecao {
+      .colecao-img {
         width: 170px;
-        margin-bottom: 15px;
-        z-index: 1;
+        margin-bottom: 20px;
+        z-index: 2;
+        position: relative;
       }
-
       .frase {
+        font-family: 'Ahkio', sans-serif;
         font-size: 28px;
         font-weight: 500;
         padding: 20px;
@@ -55,36 +49,62 @@
         border-radius: 12px;
         max-width: 90%;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
-        z-index: 1;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
       }
-
       .logo {
         width: 180px;
         opacity: 1;
-        margin-top: 20px;
-        z-index: 1;
+        margin-top: 0;
+        z-index: 2;
+        position: relative;
       }
+      .coracoes-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.4;
+      }
+      .coracoes-bg img {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+      }
+      /* posicionamento aleatório dos corações */
+      .cor1 { top: 10%; left: 15%; }
+      .cor2 { top: 30%; left: 80%; }
+      .cor3 { top: 60%; left: 35%; }
+      .cor4 { top: 75%; left: 65%; }
+      .cor5 { top: 45%; left: 50%; }
     </style>
   </head>
   <body>
-    <!-- Corações ao fundo -->
-    <img class="coracao c1" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
-    <img class="coracao c2" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
-    <img class="coracao c3" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
-    <img class="coracao c4" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
-    <img class="coracao c5" src="https://i.postimg.cc/tYH3yYZC/coracao.png" alt="Coração" />
-
     <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-    <img class="colecao" src="https://i.postimg.cc/LJ8Z6fHR/365-motivos.png" alt="365 Motivos para te Amar" />
+
+    <img class="colecao-img" src="https://i.postimg.cc/7ZWY3xkF/375dias.png" alt="Coleção 375 dias" />
+
     <div class="frase" id="frase">Carregando frase...</div>
+
     <img class="logo" src="https://i.postimg.cc/f3Hyxvmq/mugshopp-logo.png" alt="Logo MugShopp" />
+
+    <div class="coracoes-bg">
+      <img src="https://i.postimg.cc/tYH3yYZC/heart.png" alt="Coração" class="cor1" />
+      <img src="https://i.postimg.cc/tYH3yYZC/heart.png" alt="Coração" class="cor2" />
+      <img src="https://i.postimg.cc/tYH3yYZC/heart.png" alt="Coração" class="cor3" />
+      <img src="https://i.postimg.cc/tYH3yYZC/heart.png" alt="Coração" class="cor4" />
+      <img src="https://i.postimg.cc/tYH3yYZC/heart.png" alt="Coração" class="cor5" />
+    </div>
 
     <script>
       async function carregarFrase() {
         try {
           const response = await fetch('namorados.txt');
-          if (!response.ok) throw new Error('Arquivo não encontrado');
+          if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
           const texto = await response.text();
           const frases = texto.split('\n').filter(l => l.trim() !== '');
           const hoje = new Date();
@@ -92,7 +112,7 @@
           const diff = hoje - inicio;
           const umDia = 1000 * 60 * 60 * 24;
           const diaDoAno = Math.floor(diff / umDia);
-          const frase = frases[diaDoAno % frases.length];
+          const frase = frases[(diaDoAno - 1) % frases.length];
           document.getElementById('frase').textContent = `"${frase}"`;
         } catch (e) {
           document.getElementById('frase').textContent = 'Erro ao carregar a frase do dia.';
