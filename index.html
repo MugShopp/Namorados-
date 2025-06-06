@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Expansão da Consciência</title>
+  <title>Amor em Cada Dia</title>
   <style>
     @font-face {
       font-family: 'Ahkio';
@@ -21,51 +21,24 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 0.3));
+      background: linear-gradient(135deg, #fdeff9, #ecb5d8, #f9c6df);
       position: relative;
       overflow: hidden;
-      color: #000;
+      color: #333;
       text-align: center;
-    }
-
-    /* Fundo com corações */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      background-image:
-        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
-        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
-        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
-        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png'),
-        url('https://i.postimg.cc/SRQ1XYD8/images-1-4.png');
-      background-repeat: no-repeat;
-      background-position:
-        10% 15%,
-        50% 5%,
-        80% 30%,
-        25% 70%,
-        75% 75%;
-      background-size: 40px 40px;
-      opacity: 0.4;
-      z-index: 0;
     }
 
     .creditos {
       font-size: 14px;
       margin-bottom: 12px;
-      color: #222;
+      color: #555;
       font-weight: bold;
       position: relative;
       z-index: 2;
     }
 
     .colecao {
-      width: 170px;
+      width: 180px;
       margin-bottom: 20px;
       position: relative;
       z-index: 2;
@@ -79,7 +52,7 @@
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 12px;
       max-width: 90%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       margin-bottom: 30px;
       position: relative;
       z-index: 2;
@@ -92,12 +65,29 @@
       position: relative;
       z-index: 2;
     }
+
+    .player {
+      margin-top: 15px;
+      z-index: 2;
+      position: relative;
+    }
   </style>
 </head>
 <body>
   <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-  <img class="colecao" src="https://i.postimg.cc/DyrmfWR5/Photoroom-20250525-190633840-1.png" alt="Imagem Coleção 375 Dias" />
+  
+  <!-- Troque esse link se quiser outra imagem romântica -->
+  <img class="colecao" src="https://i.postimg.cc/7Lk70j73/file-00000000536061f88877aca54a8ce553-1.png" alt="Imagem Coleção Namorados" />
+
   <div class="frase" id="frase">Carregando frase...</div>
+
+  <div class="player">
+    <audio controls>
+      <source src="You're Still The One.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
   <img class="logo" src="https://i.postimg.cc/7LWQCZjQ/Logo-Alta-Resolu-o-1.png" alt="Logo MugShopp" />
 
   <script>
@@ -108,7 +98,7 @@
         const texto = await response.text();
         const frases = texto.split('\n').filter(l => l.trim() !== '');
         const hoje = new Date();
-        const inicio = new Date(hoje.getFullYear(), 0, 1); // 1º de janeiro
+        const inicio = new Date(hoje.getFullYear(), 0, 1);
         const diff = hoje - inicio;
         const umDia = 1000 * 60 * 60 * 24;
         const diaDoAno = Math.floor(diff / umDia);
