@@ -16,35 +16,12 @@
       margin: 0;
       padding: 20px;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       background: linear-gradient(135deg, #fff0f0, #ffe5e5, #fffafa);
       color: #000;
       text-align: center;
-      position: relative;
+      min-height: 100vh;
       overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      background-image:
-        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png'),
-        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png'),
-        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png');
-      background-repeat: no-repeat;
-      background-position: 10% 20%, 80% 10%, 50% 80%;
-      background-size: 50px 50px;
-      opacity: 0.3;
-      z-index: 0;
+      position: relative;
     }
 
     .creditos {
@@ -53,11 +30,13 @@
       color: #333;
       font-weight: bold;
       z-index: 2;
+      position: relative;
     }
 
     .colecao {
       width: 170px;
       margin-bottom: 20px;
+      position: relative;
       z-index: 2;
     }
 
@@ -69,18 +48,21 @@
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 12px;
       max-width: 90%;
+      margin: 0 auto 30px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      position: relative;
       z-index: 2;
     }
 
     .logo {
       width: 180px;
+      position: relative;
       z-index: 2;
     }
 
     .controle-audio {
       margin-top: 10px;
+      position: relative;
       z-index: 2;
     }
 
@@ -97,6 +79,42 @@
 
     button:hover {
       background-color: #f294ac;
+    }
+
+    /* Corações flutuantes */
+    .hearts-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://i.postimg.cc/jjG65fSy/images-4.png');
+      background-size: cover;
+      animation: floatUp linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8) rotate(0deg);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -117,27 +135,26 @@
     <button onclick="alternarAudio()">🔊 Música: Ativada</button>
   </div>
 
+  <!-- Corações animados -->
+  <div class="hearts-container" id="hearts-container"></div>
+
   <script>
     async function carregarFrase() {
       try {
         const response = await fetch('namorados.txt');
-        if (!response.ok) throw new Error('Arquivo namorados.txt não encontrado');
+        if (!response.ok) throw new Error('Arquivo não encontrado');
         const texto = await response.text();
-        const frases = texto.split('\n').filter(l => l.trim() !== '');
+        const frases = texto.split('\n').filter(f => f.trim() !== '');
         const hoje = new Date();
         const inicio = new Date(hoje.getFullYear(), 0, 1);
-        const diff = hoje - inicio;
-        const umDia = 1000 * 60 * 60 * 24;
-        const diaDoAno = Math.floor(diff / umDia);
-        const frase = frases[diaDoAno % frases.length];
+        const diasPassados = Math.floor((hoje - inicio) / (1000 * 60 * 60 * 24));
+        const frase = frases[diasPassados % frases.length];
         document.getElementById('frase').textContent = `"${frase}"`;
       } catch (e) {
-        document.getElementById('frase').textContent = 'Erro ao carregar a frase do dia.';
+        document.getElementById('frase').textContent = 'Erro ao carregar frase do dia.';
         console.error(e);
       }
     }
-
-    carregarFrase();
 
     function alternarAudio() {
       const audio = document.getElementById('musica');
@@ -150,6 +167,22 @@
         botao.textContent = '🔇 Música: Desativada';
       }
     }
+
+    function gerarCoracoes(qtde = 20) {
+      const container = document.getElementById('hearts-container');
+      for (let i = 0; i < qtde; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${4 + Math.random() * 4}s`;
+        heart.style.animationDelay = `${Math.random() * 5}s`;
+        heart.style.opacity = Math.random() * 0.8 + 0.2;
+        container.appendChild(heart);
+      }
+    }
+
+    carregarFrase();
+    gerarCoracoes(30);
   </script>
 </body>
 </html>
