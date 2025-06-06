@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Especial Dia dos Namorados</title>
+  <title>Namorados - 365 Dias</title>
   <style>
     @font-face {
       font-family: 'Ahkio';
@@ -21,35 +21,30 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, #ffeaea, #ffffff, #ffebeb);
+      background: linear-gradient(135deg, #fff0f0, #ffe5e5, #fffafa);
       color: #000;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png');
-      background-size: cover;
-      animation: float 6s infinite ease-in-out;
-      opacity: 0.7;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-10vh) scale(1.2);
-        opacity: 0;
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background-image:
+        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png'),
+        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png'),
+        url('https://i.postimg.cc/pXd9kHMn/kisspng-heart-love-clip-art-heart-5abe0de64dbdf6-4933509215224097027522.png');
+      background-repeat: no-repeat;
+      background-position: 10% 20%, 80% 10%, 50% 80%;
+      background-size: 50px 50px;
+      opacity: 0.3;
+      z-index: 0;
     }
 
     .creditos {
@@ -93,7 +88,7 @@
       padding: 8px 16px;
       border: none;
       border-radius: 20px;
-      background-color: #f8c6c8;
+      background-color: #f7b8c8;
       cursor: pointer;
       font-size: 14px;
       font-weight: bold;
@@ -101,19 +96,19 @@
     }
 
     button:hover {
-      background-color: #f5a9ad;
+      background-color: #f294ac;
     }
   </style>
 </head>
 <body>
   <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
-  <img class="colecao" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="Coleção Dia dos Namorados" />
+  <img class="colecao" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="Coleção 365 motivos pra te amar" />
   <div class="frase" id="frase">Carregando frase...</div>
   <img class="logo" src="https://i.postimg.cc/7LWQCZjQ/Logo-Alta-Resolu-o-1.png" alt="Logo MugShopp" />
 
   <!-- Música de fundo -->
   <audio id="musica" loop autoplay>
-    <source src="Still-The-One.mp3" type="audio/mpeg">
+    <source src="You're Still The One.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
@@ -121,20 +116,6 @@
   <div class="controle-audio">
     <button onclick="alternarAudio()">🔊 Música: Ativada</button>
   </div>
-
-  <!-- Corações animados -->
-  <script>
-    function criarCoracao() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.style.left = `${Math.random() * 100}vw`;
-      heart.style.animationDuration = `${4 + Math.random() * 4}s`;
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 8000);
-    }
-
-    setInterval(criarCoracao, 500);
-  </script>
 
   <script>
     async function carregarFrase() {
