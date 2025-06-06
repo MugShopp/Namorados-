@@ -8,8 +8,6 @@
     @font-face {
       font-family: 'Ahkio';
       src: url('./fonts/Ahkio-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
     }
 
     body {
@@ -96,7 +94,7 @@
       display: block;
       width: 20px;
       height: 20px;
-      background: url('https://i.postimg.cc/fyM3qDK5/heart-pink.png') no-repeat center/contain;
+      background: url('https://i.postimg.cc/jjG65fSy/images-4.png') no-repeat center/contain;
       animation: float 10s linear infinite;
       opacity: 0.7;
     }
@@ -124,13 +122,13 @@
 
   <div class="music-button">
     <button onclick="toggleAudio()">🎵</button>
-    <audio id="musica">
-      <source src="You're Still The One.mp3" type="audio/mpeg">
-      Seu navegador não suporta áudio.
-    </audio>
   </div>
 
-  <!-- ❤️ Corações no fundo -->
+  <audio id="musica">
+    <source src="You're Still The One.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
   <div class="hearts" id="hearts-container"></div>
 
   <script>
@@ -164,10 +162,11 @@
 
     function criarCoracoes() {
       const container = document.getElementById('hearts-container');
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 25; i++) {
         const heart = document.createElement('span');
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.animationDelay = Math.random() * 10 + 's';
+        heart.style.top = '100%';
         container.appendChild(heart);
       }
     }
