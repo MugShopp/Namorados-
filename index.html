@@ -21,10 +21,10 @@
       position: relative;
     }
 
-    .status-bar { width: 100%; display: flex; justify-content: space-between; max-width: 400px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #bf9a5a; font-weight: 600; z-index: 10; }
+    /* Cabeçalho ajustado para preto */
+    .status-bar { width: 100%; display: flex; justify-content: space-between; max-width: 400px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #1a1a1a; font-weight: 600; z-index: 10; }
 
     .header { text-align: center; z-index: 10; }
-    /* Logotipo aumentado 40% */
     .arte-principal { width: 252px; margin-top: 20px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03)); }
 
     .frase-container { width: 100%; max-width: 500px; text-align: center; z-index: 10; padding: 0 15px; }
@@ -38,14 +38,14 @@
     .btn-discreto { background: none; border: none; color: #bf9a5a; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; margin-bottom: 20px; opacity: 0.7; transition: 0.3s; }
     .btn-discreto:hover { opacity: 1; }
 
-    .info-rodape { font-size: 8px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px; }
+    /* Rodapé ajustado para preto */
+    .info-rodape { font-size: 8px; color: #1a1a1a; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px; }
 
-    /* Partículas (Corações Dourados) */
     .particle { 
         position: absolute; 
         pointer-events: none; 
         z-index: 1; 
-        opacity: 0.7; /* Opacidade solicitada */
+        opacity: 0.7; 
         animation: floatUp 8s linear infinite; 
     }
     
@@ -53,7 +53,7 @@
       0% { transform: translateY(100vh); opacity: 0; }
       10% { opacity: 0.7; }
       90% { opacity: 0.7; }
-      100% { transform: translateY(0vh); opacity: 0; } /* Sobe até o topo */
+      100% { transform: translateY(0vh); opacity: 0; }
     }
     
     #particle-field { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
@@ -131,3 +131,4 @@
   </script>
 </body>
 </html>
+
