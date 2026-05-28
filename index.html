@@ -8,7 +8,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      background-color: #ffffff; /* Branco absoluto */
+      background-color: #ffffff;
       color: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
       display: flex;
@@ -24,7 +24,8 @@
     .status-bar { width: 100%; display: flex; justify-content: space-between; max-width: 400px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #bf9a5a; font-weight: 600; z-index: 10; }
 
     .header { text-align: center; z-index: 10; }
-    .arte-principal { width: 180px; margin-top: 20px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03)); }
+    /* Logotipo aumentado 40% (180px * 1.4 = 252px) */
+    .arte-principal { width: 252px; margin-top: 20px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03)); }
 
     .frase-container { width: 100%; max-width: 500px; text-align: center; z-index: 10; padding: 0 15px; }
     .frase { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 300; font-size: 28px; line-height: 1.5; background: linear-gradient(to right, #1a1a1a 20%, #bf9a5a 40%, #e2c285 50%, #bf9a5a 60%, #1a1a1a 80%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: brilhoDourado 5s linear infinite, revealText 1.5s ease forwards; }
@@ -34,20 +35,17 @@
 
     .footer { text-align: center; z-index: 10; width: 100%; padding-bottom: 20px; }
     
-    /* Botão Discreto */
     .btn-discreto { background: none; border: none; color: #bf9a5a; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; margin-bottom: 20px; opacity: 0.7; transition: 0.3s; }
     .btn-discreto:hover { opacity: 1; }
 
-    /* Rodapé Informativo */
     .info-rodape { font-size: 8px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px; }
 
-    /* Corações limitados até o cabeçalho (z-index baixo) */
     .particle { position: absolute; pointer-events: none; z-index: 1; animation: floatUp 10s linear infinite; }
     @keyframes floatUp {
       0% { transform: translateY(100vh); opacity: 0; }
       10% { opacity: 0.7; }
       80% { opacity: 0.7; }
-      100% { transform: translateY(20vh); opacity: 0; } /* Para antes do cabeçalho */
+      100% { transform: translateY(20vh); opacity: 0; }
     }
   </style>
 </head>
@@ -59,7 +57,7 @@
   </div>
 
   <div class="header">
-    <img class="arte-principal" src="https://i.postimg.cc/xCYcjWzp/365-Motivos-20260528-075235-0000.png" alt="365 Motivos">
+    <img class="arte-principal" src="https://i.postimg.cc/0QYT04rQ/365-Motivos-20260528-075235-0000.png" alt="365 Motivos">
   </div>
 
   <div class="frase-container">
@@ -75,6 +73,19 @@
   <div id="particle-field"></div>
 
   <script>
+    async function carregarFrases() {
+      try {
+        const response = await fetch('frases.txt');
+        if (!response.ok) throw new Error('Erro ao carregar');
+        const text = await response.text();
+        const frases = text.split('\n').filter(f => f.trim() !== '');
+        const dia = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 864e5) - 1;
+        document.getElementById('frase-display').textContent = frases[dia % frases.length] || "Um motivo especial para hoje.";
+      } catch (e) {
+        document.getElementById('frase-display').textContent = "Aproveite cada momento do seu dia.";
+      }
+    }
+
     function atualizar() {
       const agora = new Date();
       document.getElementById('relogio').textContent = agora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
@@ -105,6 +116,7 @@
     setInterval(atualizar, 1000);
     atualizar();
     criarParticulas();
+    carregarFrases();
   </script>
 </body>
 </html>
