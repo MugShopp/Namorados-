@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      background-color: #ffffff; /* Branco puro para fusão total das imagens */
+      background-color: #ffffff;
       color: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
       display: flex;
@@ -19,6 +19,7 @@
       min-height: 100vh;
       padding: 40px 20px;
       overflow: hidden;
+      position: relative;
     }
 
     /* Barra de Status Minimalista */
@@ -50,7 +51,7 @@
     .header { text-align: center; z-index: 10; }
     
     .arte-principal {
-      width: 170px;
+      width: 180px; /* Ajuste leve para o novo logo */
       margin-top: 20px;
       filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03));
     }
@@ -70,14 +71,11 @@
       font-weight: 300;
       font-size: 28px;
       line-height: 1.5;
-      
-      /* Efeito de Brilho Metálico */
       background: linear-gradient(to right, #1a1a1a 20%, #bf9a5a 40%, #e2c285 50%, #bf9a5a 60%, #1a1a1a 80%);
       background-size: 200% auto;
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
-      
       animation: brilhoDourado 5s linear infinite, revealText 1.5s ease forwards;
     }
 
@@ -94,7 +92,7 @@
     .footer { text-align: center; z-index: 10; width: 100%; }
 
     .logo-assinatura {
-      width: 175px; /* Tamanho aumentado conforme pedido */
+      width: 175px;
       margin-bottom: 35px;
       display: block;
       margin-left: auto;
@@ -118,19 +116,25 @@
 
     .btn-premium:active { transform: scale(0.96); }
 
-    /* Partículas sutilmente etéreas */
+    /* Corações Dourados: Velocidade Média Reajustada */
     .particle {
       position: absolute;
       pointer-events: none;
       z-index: 1;
-      opacity: 0.3;
-      animation: floatUp linear infinite;
+      opacity: 0;
+      animation: floatUp 12s linear infinite, sideSway 3s ease-in-out infinite alternate;
     }
 
     @keyframes floatUp {
-      0% { transform: translateY(110vh); opacity: 0; }
-      20% { opacity: 0.3; }
-      100% { transform: translateY(-10vh); opacity: 0; }
+      0% { transform: translateY(105vh) scale(0.8); opacity: 0; }
+      10% { opacity: 0.15; }
+      90% { opacity: 0.15; }
+      100% { transform: translateY(-15vh) scale(1.1); opacity: 0; }
+    }
+
+    @keyframes sideSway {
+      from { margin-left: -10px; }
+      to { margin-left: 10px; }
     }
   </style>
 </head>
@@ -142,7 +146,7 @@
   </div>
 
   <div class="header">
-    <img class="arte-principal" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="365 Motivos">
+    <img class="arte-principal" src="https://i.postimg.cc/xCYcjWzp/365-Motivos-20260528-075235-0000.png" alt="365 Motivos">
   </div>
 
   <div class="frase-container">
@@ -195,13 +199,13 @@
 
     function criarParticulas() {
       const cont = document.getElementById('particle-field');
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 15; i++) {
         const p = document.createElement('div');
         p.className = 'particle';
-        p.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="#bf9a5a"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+        p.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="#bf9a5a"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
         p.style.left = Math.random() * 100 + '%';
-        p.style.animationDuration = (10 + Math.random() * 15) + 's';
-        p.style.animationDelay = Math.random() * 10 + 's';
+        p.style.animationDuration = (10 + Math.random() * 5) + 's';
+        p.style.animationDelay = (Math.random() * 8) + 's';
         cont.appendChild(p);
       }
     }
