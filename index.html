@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MugShopp - 365 Motivos</title>
   <style>
-    /* Reset e Fundamentos de Luxo */
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      background-color: #ffffff; /* Fundo branco puro garantido */
+      background-color: #ffffff; /* Branco absoluto */
       color: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
       display: flex;
@@ -22,119 +21,33 @@
       position: relative;
     }
 
-    /* Barra de Status Minimalista */
-    .status-bar {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      max-width: 400px;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #bf9a5a;
-      font-weight: 600;
-      z-index: 10;
-    }
+    .status-bar { width: 100%; display: flex; justify-content: space-between; max-width: 400px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #bf9a5a; font-weight: 600; z-index: 10; }
 
-    .dia-counter {
-      filter: blur(8px);
-      opacity: 0;
-      animation: focusReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes focusReveal {
-      to { filter: blur(0); opacity: 1; }
-    }
-
-    /* Cabeçalho */
     .header { text-align: center; z-index: 10; }
+    .arte-principal { width: 180px; margin-top: 20px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03)); }
+
+    .frase-container { width: 100%; max-width: 500px; text-align: center; z-index: 10; padding: 0 15px; }
+    .frase { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 300; font-size: 28px; line-height: 1.5; background: linear-gradient(to right, #1a1a1a 20%, #bf9a5a 40%, #e2c285 50%, #bf9a5a 60%, #1a1a1a 80%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: brilhoDourado 5s linear infinite, revealText 1.5s ease forwards; }
+
+    @keyframes brilhoDourado { to { background-position: 200% center; } }
+    @keyframes revealText { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .footer { text-align: center; z-index: 10; width: 100%; padding-bottom: 20px; }
     
-    .arte-principal {
-      width: 180px; 
-      margin-top: 20px;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03));
-    }
+    /* Botão Discreto */
+    .btn-discreto { background: none; border: none; color: #bf9a5a; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; margin-bottom: 20px; opacity: 0.7; transition: 0.3s; }
+    .btn-discreto:hover { opacity: 1; }
 
-    /* A Frase com Fio de Luz Dourado */
-    .frase-container {
-      width: 100%;
-      max-width: 500px;
-      text-align: center;
-      z-index: 10;
-      padding: 0 15px;
-    }
+    /* Rodapé Informativo */
+    .info-rodape { font-size: 8px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px; }
 
-    .frase {
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 28px;
-      line-height: 1.5;
-      background: linear-gradient(to right, #1a1a1a 20%, #bf9a5a 40%, #e2c285 50%, #bf9a5a 60%, #1a1a1a 80%);
-      background-size: 200% auto;
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: brilhoDourado 5s linear infinite, revealText 1.5s ease forwards;
-    }
-
-    @keyframes brilhoDourado {
-      to { background-position: 200% center; }
-    }
-
-    @keyframes revealText {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Rodapé e Botão */
-    .footer { text-align: center; z-index: 10; width: 100%; }
-
-    .logo-assinatura {
-      width: 175px;
-      margin-bottom: 35px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-premium {
-      background-color: #1a1a1a;
-      color: #bf9a5a;
-      border: none;
-      padding: 16px 50px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 100px;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .btn-premium:active { transform: scale(0.96); }
-
-    /* Corações Dourados: Opacidade de 70% */
-    .particle {
-      position: absolute;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0;
-      animation: floatUp 12s linear infinite, sideSway 3s ease-in-out infinite alternate;
-    }
-
+    /* Corações limitados até o cabeçalho (z-index baixo) */
+    .particle { position: absolute; pointer-events: none; z-index: 1; animation: floatUp 10s linear infinite; }
     @keyframes floatUp {
-      0% { transform: translateY(105vh) scale(0.8); opacity: 0; }
-      10% { opacity: 0.7; } /* Opacidade aumentada para 70% conforme solicitado */
-      90% { opacity: 0.7; }
-      100% { transform: translateY(-15vh) scale(1.1); opacity: 0; }
-    }
-
-    @keyframes sideSway {
-      from { margin-left: -15px; }
-      to { margin-left: 15px; }
+      0% { transform: translateY(100vh); opacity: 0; }
+      10% { opacity: 0.7; }
+      80% { opacity: 0.7; }
+      100% { transform: translateY(20vh); opacity: 0; } /* Para antes do cabeçalho */
     }
   </style>
 </head>
@@ -142,7 +55,7 @@
 
   <div class="status-bar">
     <span id="relogio">00:00</span>
-    <span class="dia-counter" id="contador-dia">Motivo: --</span>
+    <span id="contador-dia">Motivo: --</span>
   </div>
 
   <div class="header">
@@ -150,44 +63,36 @@
   </div>
 
   <div class="frase-container">
-    <p class="frase" id="frase-display">Carregando sua mensagem...</p>
+    <p class="frase" id="frase-display">Carregando...</p>
   </div>
 
   <div class="footer">
-    <img class="logo-assinatura" src="https://i.postimg.cc/T190pkF7/Copia-de-Novo-Logotipo-2026-20260127-183120-0000.png" alt="MugShopp">
-    <button class="btn-premium" onclick="controleAudio()" id="btn-txt">Ativar Trilha</button>
+    <button class="btn-discreto" onclick="controleAudio()" id="btn-txt">Ativar Trilha</button>
+    <p class="info-rodape">Feito com carinho por: MugShopp - Estúdio de Design e Personalizados - Taubaté/SP - (12) 99243.9101</p>
   </div>
 
-  <audio id="musica" loop>
-    <source src="You're Still The One.mp3" type="audio/mpeg">
-  </audio>
-
+  <audio id="musica" loop><source src="You're Still The One.mp3" type="audio/mpeg"></audio>
   <div id="particle-field"></div>
 
   <script>
-    function atualizarRelogio() {
+    function atualizar() {
       const agora = new Date();
-      const h = String(agora.getHours()).padStart(2, '0');
-      const m = String(agora.getMinutes()).padStart(2, '0');
-      document.getElementById('relogio').textContent = `${h}:${m}`;
-
-      const inicioAno = new Date(agora.getFullYear(), 0, 0);
-      const diaDoAno = Math.floor((agora - inicioAno) / 864e5);
-      document.getElementById('contador-dia').textContent = `Motivo: ${diaDoAno}`;
+      document.getElementById('relogio').textContent = agora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      const dia = Math.floor((agora - new Date(agora.getFullYear(), 0, 0)) / 864e5);
+      document.getElementById('contador-dia').textContent = `Motivo: ${dia}`;
     }
-
-    async function carregarFrase() {
-      const el = document.getElementById('frase-display');
-      try {
-        const res = await fetch('namorados.txt');
-        const txt = await res.text();
-        const frases = txt.split('\n').filter(f => f.trim());
-        const d = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 864e5);
-        el.textContent = `"${frases[d % frases.length]}"`;
-      } catch {
-        el.textContent = `"Você é minha melhor escolha todos os dias."`;
+    
+    function criarParticulas() {
+      const cont = document.getElementById('particle-field');
+      for (let i = 0; i < 12; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="#bf9a5a"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+        p.style.left = Math.random() * 90 + 5 + '%';
+        p.style.animationDuration = (8 + Math.random() * 5) + 's';
+        p.style.animationDelay = (Math.random() * 8) + 's';
+        cont.appendChild(p);
       }
-      criarParticulas();
     }
 
     function controleAudio() {
@@ -197,22 +102,9 @@
       else { m.pause(); b.textContent = "Ativar Trilha"; }
     }
 
-    function criarParticulas() {
-      const cont = document.getElementById('particle-field');
-      for (let i = 0; i < 15; i++) {
-        const p = document.createElement('div');
-        p.className = 'particle';
-        p.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="#bf9a5a"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
-        p.style.left = Math.random() * 100 + '%';
-        p.style.animationDuration = (10 + Math.random() * 5) + 's';
-        p.style.animationDelay = (Math.random() * 8) + 's';
-        cont.appendChild(p);
-      }
-    }
-
-    setInterval(atualizarRelogio, 1000);
-    atualizarRelogio();
-    carregarFrase();
+    setInterval(atualizar, 1000);
+    atualizar();
+    criarParticulas();
   </script>
 </body>
 </html>
