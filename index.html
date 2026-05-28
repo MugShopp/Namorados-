@@ -3,167 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>365 Motivos - MugShopp</title>
+  <title>MugShopp - 365 Dias de Amor</title>
   <style>
-    /* Reset básico */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Reset de Design Profissional */
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      background-color: #ffffff; /* Branco puro para sumir com as bordas das fotos */
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      color: #333;
+      background-color: #ffffff; /* Branco absoluto para fusão perfeita com as logos */
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       min-height: 100vh;
-      padding: 40px 20px;
-      overflow-x: hidden;
+      padding: 30px 20px;
+      overflow: hidden;
+      perspective: 1000px; /* Necessário para o efeito 3D/Paralaxe */
     }
 
-    .topo-texto {
+    /* Barra de Status Dinâmica - Estilo Minimalista */
+    .status-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      max-width: 400px;
       font-size: 10px;
-      letter-spacing: 5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: #bf9a5a;
-      margin-bottom: 30px;
-      font-weight: 300;
+      font-weight: 600;
+      z-index: 20;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
 
-    .img-principal {
-      width: 180px;
-      margin-bottom: 50px;
-      /* Sem sombras pesadas para manter o clean */
+    /* Animação do Dia surgindo como lente */
+    .dia-counter {
+      display: inline-block;
+      filter: blur(5px);
+      animation: focusReveal 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      animation-delay: 0.5s;
     }
 
-    /* Card da Frase: Minimalismo puro */
-    .container-frase {
+    @keyframes focusReveal {
+      to { filter: blur(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Elementos de Identidade */
+    .header { text-align: center; z-index: 10; transition: transform 0.1s ease-out; }
+    .arte-principal {
+      width: 170px;
+      margin-top: 20px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+    }
+
+    /* Card da Frase com Paralaxe Sutil */
+    .frase-container {
       width: 100%;
       max-width: 450px;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
-      margin-bottom: 50px;
-      position: relative;
+      z-index: 10;
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
     }
 
     .frase {
-      /* Fonte leve, fina e elegante */
-      font-family: 'Times New Roman', serif; /* Ou uma Thin Sans-serif */
+      font-family: "Cormorant Garamond", serif;
       font-style: italic;
       font-weight: 300;
-      font-size: 24px;
+      font-size: 26px;
       line-height: 1.6;
       color: #1a1a1a;
       opacity: 0;
-      transform: translateY(10px);
-      animation: suaveEntrada 1.5s ease forwards;
+      transform: translateZ(20px);
+      animation: revealText 2s ease forwards;
+      animation-delay: 0.8s;
     }
 
-    @keyframes suaveEntrada {
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes revealText {
+      to { opacity: 1; transform: translateZ(0); }
     }
 
+    /* Rodapé e Botão Pílula */
+    .footer { text-align: center; z-index: 10; width: 100%; }
     .logo-assinatura {
-      width: 150px;
-      margin-bottom: 40px;
+      width: 130px;
+      margin-bottom: 35px;
+      opacity: 0.9;
     }
 
-    /* Botão Estilo Premium (Apple/Adidas) */
-    .btn-musica {
-      background: #1a1a1a;
+    .btn-premium {
+      background-color: #1a1a1a;
       color: #bf9a5a;
       border: none;
-      padding: 15px 40px;
+      padding: 18px 50px;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      border-radius: 50px; /* Botão arredondado */
+      border-radius: 100px;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
-      transition: all 0.3s ease;
-      z-index: 10;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .btn-musica:active {
-      transform: scale(0.95);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+    .btn-premium:active { transform: scale(0.95); }
 
-    /* Partículas de Amor (Sutis) */
-    .particula {
+    /* Partículas Douradas Dinâmicas */
+    .particle {
       position: absolute;
       pointer-events: none;
-      opacity: 0.4;
-      z-index: 0;
-      animation: subir 10s linear infinite;
+      z-index: 1;
+      animation: floatUp linear infinite;
     }
 
-    @keyframes subir {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    @keyframes floatUp {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
       20% { opacity: 0.4; }
-      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
     }
   </style>
 </head>
-<body>
+<body onmousemove="parallax(event)">
 
-  <div class="topo-texto">Coleção Exclusiva</div>
-
-  <img class="img-principal" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="365 Motivos">
-
-  <div class="container-frase">
-    <p class="frase" id="frase">"Aguardando sua mensagem de amor..."</p>
+  <div class="status-bar">
+    <span id="hora-atual">00:00</span>
+    <span class="dia-counter" id="dia-atual">Dia: --</span>
   </div>
 
-  <img class="logo-assinatura" src="https://i.postimg.cc/T190pkF7/Copia-de-Novo-Logotipo-2026-20260127-183120-0000.png" alt="MugShopp">
+  <div class="header" id="header-layer">
+    <img class="arte-principal" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="365 Motivos">
+  </div>
 
-  <button class="btn-musica" onclick="controlarMusica()" id="btn-txt">Ativar Música</button>
+  <div class="frase-container" id="frase-layer">
+    <p class="frase" id="frase-texto">"Carregando motivo..."</p>
+  </div>
 
-  <audio id="player" loop>
+  <div class="footer">
+    <img class="logo-assinatura" src="https://i.postimg.cc/T190pkF7/Copia-de-Novo-Logotipo-2026-20260127-183120-0000.png" alt="MugShopp">
+    <div>
+      <button class="btn-premium" onclick="toggleAudio()" id="btn-label">Ativar Trilha</button>
+    </div>
+  </div>
+
+  <audio id="musica" loop>
     <source src="You're Still The One.mp3" type="audio/mpeg">
   </audio>
 
-  <div id="container-particulas"></div>
+  <div id="particle-container"></div>
 
   <script>
-    // Sistema de frases e áudio simplificado e elegante
-    const frasesDefault = ["Porque seu sorriso ilumina meu dia.", "Pelo seu jeito único de me fazer feliz."];
+    // 1. Relógio e Contador de Dias
+    function atualizarStatus() {
+      const agora = new Date();
+      const h = String(agora.getHours()).padStart(2, '0');
+      const m = String(agora.getMinutes()).padStart(2, '0');
+      document.getElementById('hora-atual').textContent = `${h}:${m}`;
 
-    async function iniciar() {
-      const el = document.getElementById('frase');
+      const inicioAno = new Date(agora.getFullYear(), 0, 0);
+      const dif = agora - inicioAno;
+      const diaDoAno = Math.floor(dif / 864e5);
+      document.getElementById('dia-atual').textContent = `Motivo: ${diaDoAno}`;
+    }
+
+    // 2. Paralaxe Suave (Mouse e Toque)
+    function parallax(e) {
+      const x = (window.innerWidth / 2 - e.pageX) / 25;
+      const y = (window.innerHeight / 2 - e.pageY) / 25;
+      
+      document.getElementById('frase-layer').style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+      document.getElementById('header-layer').style.transform = `translateX(${x*1.5}px) translateY(${y*1.5}px)`;
+    }
+
+    // 3. Controle de Áudio
+    function toggleAudio() {
+      const m = document.getElementById('musica');
+      const b = document.getElementById('btn-label');
+      if (m.paused) {
+        m.play();
+        b.textContent = "Pausar Trilha";
+      } else {
+        m.pause();
+        b.textContent = "Ativar Trilha";
+      }
+    }
+
+    // 4. Carregar Frase
+    async function carregar() {
+      const el = document.getElementById('frase-texto');
       try {
         const res = await fetch('namorados.txt');
         const txt = await res.text();
         const frases = txt.split('\n').filter(f => f.trim());
-        const dia = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 1)) / 864e5);
-        el.textContent = `"${frases[dia % frases.length]}"`;
+        const d = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 864e5);
+        el.textContent = `"${frases[d % frases.length]}"`;
       } catch {
-        el.textContent = `"${frasesDefault[0]}"`;
+        el.textContent = `"Você é minha melhor escolha todos os dias."`;
       }
-      criarCoracoes();
+      gerarParticulas();
     }
 
-    function controlarMusica() {
-      const p = document.getElementById('player');
-      const b = document.getElementById('btn-txt');
-      if(p.paused) { p.play(); b.textContent = "Pausar Música"; }
-      else { p.pause(); b.textContent = "Ativar Música"; }
-    }
-
-    function criarCoracoes() {
-      const cont = document.getElementById('container-particulas');
-      for(let i=0; i<12; i++) {
-        const h = document.createElement('div');
-        h.className = 'particula';
-        h.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="%23bf9a5a" style="fill: #bf9a5a; opacity: 0.5;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
-        h.style.left = Math.random() * 100 + '%';
-        h.style.animationDuration = (8 + Math.random() * 10) + 's';
-        h.style.animationDelay = Math.random() * 5 + 's';
-        cont.appendChild(h);
+    // 5. Partículas Douradas
+    function gerarParticulas() {
+      const container = document.getElementById('particle-container');
+      for (let i = 0; i < 15; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="#bf9a5a"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (7 + Math.random() * 10) + 's';
+        p.style.animationDelay = Math.random() * 5 + 's';
+        p.style.opacity = 0.2 + Math.random() * 0.3;
+        container.appendChild(p);
       }
     }
-    iniciar();
+
+    setInterval(atualizarStatus, 1000);
+    atualizarStatus();
+    carregar();
   </script>
 </body>
 </html>
