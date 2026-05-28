@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      background-color: #ffffff;
+      background-color: #ffffff; /* Fundo branco puro garantido */
       color: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
       display: flex;
@@ -51,7 +51,7 @@
     .header { text-align: center; z-index: 10; }
     
     .arte-principal {
-      width: 180px; /* Ajuste leve para o novo logo */
+      width: 180px; 
       margin-top: 20px;
       filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03));
     }
@@ -116,7 +116,7 @@
 
     .btn-premium:active { transform: scale(0.96); }
 
-    /* Corações Dourados: Velocidade Média Reajustada */
+    /* Corações Dourados: Opacidade de 70% */
     .particle {
       position: absolute;
       pointer-events: none;
@@ -127,14 +127,14 @@
 
     @keyframes floatUp {
       0% { transform: translateY(105vh) scale(0.8); opacity: 0; }
-      10% { opacity: 0.15; }
-      90% { opacity: 0.15; }
+      10% { opacity: 0.7; } /* Opacidade aumentada para 70% conforme solicitado */
+      90% { opacity: 0.7; }
       100% { transform: translateY(-15vh) scale(1.1); opacity: 0; }
     }
 
     @keyframes sideSway {
-      from { margin-left: -10px; }
-      to { margin-left: 10px; }
+      from { margin-left: -15px; }
+      to { margin-left: 15px; }
     }
   </style>
 </head>
