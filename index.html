@@ -16,7 +16,7 @@
       margin: 0;
       padding: 20px;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #fff0f0, #ffe5e5, #fffafa);
+      background: #ffffff;
       color: #000;
       text-align: center;
       min-height: 100vh;
@@ -45,11 +45,11 @@
       font-size: 28px;
       font-weight: 500;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       max-width: 90%;
       margin: 0 auto 30px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Sombra reforçada */
       position: relative;
       z-index: 2;
     }
@@ -122,20 +122,17 @@
   <div class="creditos">Feito por MugShopp - Presentes Personalizados</div>
   <img class="colecao" src="https://i.postimg.cc/T11xRxrs/Photoroom-20250525-221951618.png" alt="Coleção 365 motivos pra te amar" />
   <div class="frase" id="frase">Carregando frase...</div>
-  <img class="logo" src="https://i.postimg.cc/7LWQCZjQ/Logo-Alta-Resolu-o-1.png" alt="Logo MugShopp" />
+  <img class="logo" src="https://i.postimg.cc/T190pkF7/Copia-de-Novo-Logotipo-2026-20260127-183120-0000.png" alt="Logo MugShopp" />
 
-  <!-- Música de fundo -->
   <audio id="musica" loop autoplay>
     <source src="You're Still The One.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
-  <!-- Botão para ligar/desligar música -->
   <div class="controle-audio">
     <button onclick="alternarAudio()">🔊 Música: Ativada</button>
   </div>
 
-  <!-- Corações animados -->
   <div class="hearts-container" id="hearts-container"></div>
 
   <script>
