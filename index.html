@@ -86,7 +86,7 @@
   <script>
     async function carregarFrases() {
       try {
-        const response = await fetch('frases.txt');
+        const response = await fetch('namorados.txt');
         if (!response.ok) throw new Error('Erro ao carregar');
         const text = await response.text();
         const frases = text.split('\n').filter(f => f.trim() !== '');
@@ -131,4 +131,3 @@
   </script>
 </body>
 </html>
-
